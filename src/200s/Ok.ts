@@ -1,8 +1,8 @@
-import { Response, ResponseParamsWithNoStatus } from "../base";
+import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 
 
-export class Ok extends Response
+export class Ok extends ResponseWithStatus
 {
     constructor({
         res,
@@ -12,16 +12,10 @@ export class Ok extends Response
     }: ResponseParamsWithNoStatus)
     {
         super({
-            status: res.statusCode,
+            statusCode: res.statusCode = 200,
             message,
             data,
             error,
         });
-
-        if (res && res.statusCode)
-        {
-            this.status = 200;
-            res.status(200);
-        }
     }
 }
