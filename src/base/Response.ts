@@ -4,21 +4,21 @@ import { ResponseParamsWithStatus } from "./ResponseParamsWithStatus";
 
 export class Response
 {
-    status?: number;
+    statusCode?: number;
     message?: string;
     data?: any;
     error?: object;
 
     constructor({
-        status,
+        statusCode,
         message,
         data,
         error,
     }: ResponseParamsWithStatus)
     {
-        this.status = (status)
-                        ? status
-                        : 200;
+        this.statusCode = (statusCode)
+                            ? statusCode
+                            : 200;
         this.message = message;
         this.data = data;
         this.error = error;

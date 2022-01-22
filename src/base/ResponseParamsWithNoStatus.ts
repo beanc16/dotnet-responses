@@ -1,4 +1,4 @@
-interface ExpressResponse
+export interface ExpressResponse
 {
     statusCode: number;
     status: Function;
