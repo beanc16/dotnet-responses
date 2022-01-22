@@ -1,7 +1,3 @@
-import { ResponseParamsWithStatus } from './ResponseParamsWithStatus';
-
-
-
 interface ExpressResponse
 {
     statusCode: number;
