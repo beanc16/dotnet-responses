@@ -1,10 +1,21 @@
 {
   "name": "dotnet-responses",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A collection of response classes that mimic ASP.NET responses",
-  "main": "index.js",
+  "main": "index.ts",
+  "keywords": [
+    "dotnet",
+    "responses",
+    "response models",
+    "response classes",
+    "response objects"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beanc16/dotnet-responses"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.ts"
   },
   "dependencies": {
     "typescript": "^4.5.5"
