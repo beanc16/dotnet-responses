@@ -1,4 +1,4 @@
-export interface BaseResponseParams
+export interface ResponseParamsWithStatus
 {
     status: number;             // For status code
     message?: string;           // For messages

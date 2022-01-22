@@ -1,6 +1,6 @@
 // Interfaces
-export { BaseResponseParams } from './BaseResponseParams';
-export { ResponseParams } from './ResponseParams';
+export { ResponseParamsWithStatus } from './ResponseParamsWithStatus';
+export { ResponseParamsWithNoStatus } from './ResponseParamsWithNoStatus';
 
 // Classes
 export { Response } from "./Response";

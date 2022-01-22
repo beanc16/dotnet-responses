@@ -1,4 +1,4 @@
-import { BaseResponseParams } from "./BaseResponseParams";
+import { ResponseParamsWithStatus } from "./ResponseParamsWithStatus";
 
 
 
@@ -14,7 +14,7 @@ export class Response
         message,
         data,
         error,
-    }: BaseResponseParams)
+    }: ResponseParamsWithStatus)
     {
         this.status = (status)
                         ? status
