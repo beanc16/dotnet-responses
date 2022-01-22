@@ -10,10 +10,10 @@ export class Response
     error?: object;
 
     constructor({
-        status,        // For status code
-        message,    // For success messages
-        data,       // For success messages with data
-        error,      // For error messages
+        status,
+        message,
+        data,
+        error,
     }: ResponseParams)
     {
         this.status = (status)
