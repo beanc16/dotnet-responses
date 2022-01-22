@@ -15,9 +15,13 @@
     "url": "https://github.com/beanc16/dotnet-responses"
   },
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "lint": "npx eslint . --ext .ts"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
     "typescript": "^4.5.5"
   }
 }
