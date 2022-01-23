@@ -15,7 +15,7 @@ export class ResponseWithStatus extends Response
     }: ResponseParamsWithNoStatus)
     {
         super({
-            statusCode: res.statusCode,
+            statusCode: (res) ? res.statusCode : undefined,
             message,
             data,
             error,
