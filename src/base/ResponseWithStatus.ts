@@ -96,7 +96,9 @@ export class ResponseWithStatus extends Response
     })
     {
         // Initialize params
-        let { passThisAsParam, data } = params;
+        const {  data } = params;
+        let { passThisAsParam } = params;
+        
         if (data)
         {
             passThisAsParam = false;
