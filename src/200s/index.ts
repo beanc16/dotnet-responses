@@ -16,3 +16,9 @@ export { NoContent } from "./NoContent";
 
 // 205
 export { ResetContent } from "./ResetContent";
+
+// 206
+export { PartialContent } from "./PartialContent";
+
+// 226
+export { IMUsed } from "./IMUsed";
