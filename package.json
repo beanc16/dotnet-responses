@@ -11,10 +11,11 @@
   "scripts": {
     "build": "tsc",
     "lint": "npx eslint . --ext .ts",
+    "lint-src": "npx eslint ./src --ext .ts",
     "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm run test && npm run lint",
-    "preversion": "npm run lint",
+    "preversion": "npm run lint-src",
     "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },

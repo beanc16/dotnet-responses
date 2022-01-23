@@ -6,6 +6,7 @@ export class Response
 {
     statusCode?: number;
     message?: string;
+    // eslint-disable-next-line
     data?: any;
     error?: object;
 

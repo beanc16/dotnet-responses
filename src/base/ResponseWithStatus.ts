@@ -98,7 +98,7 @@ export class ResponseWithStatus extends Response
         // Initialize params
         const {  data } = params;
         let { passThisAsParam } = params;
-        
+
         if (data)
         {
             passThisAsParam = false;
@@ -135,5 +135,6 @@ export class ResponseWithStatus extends Response
 interface RunResFunctionOptions extends Partial<object>
 {
     passThisAsParam?: boolean;
+    // eslint-disable-next-line
     data?: any;
 }
