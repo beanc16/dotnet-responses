@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class TemporaryRedirect extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 307,
+        message: "Temporary Redirect",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Temporary Redirect",
+        message = TemporaryRedirect.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = TemporaryRedirect.defaultParams)
     {
         super({
             res,
-            statusCode: 307,
+            statusCode: TemporaryRedirect.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }

@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class MultipleChoices extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 300,
+        message: "Multiple Choices",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Multiple Choices",
+        message = MultipleChoices.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = MultipleChoices.defaultParams)
     {
         super({
             res,
-            statusCode: 300,
+            statusCode: MultipleChoices.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }

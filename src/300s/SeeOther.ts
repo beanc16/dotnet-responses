@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class SeeOther extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 303,
+        message: "See Other",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "See Other",
+        message = SeeOther.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = SeeOther.defaultParams)
     {
         super({
             res,
-            statusCode: 303,
+            statusCode: SeeOther.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }

@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class UseProxy extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 305,
+        message: "Use Proxy",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Use Proxy",
+        message = UseProxy.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = UseProxy.defaultParams)
     {
         super({
             res,
-            statusCode: 305,
+            statusCode: UseProxy.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }

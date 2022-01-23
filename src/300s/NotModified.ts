@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class NotModified extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 304,
+        message: "Not Modified",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Not Modified",
+        message = NotModified.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = NotModified.defaultParams)
     {
         super({
             res,
-            statusCode: 304,
+            statusCode: NotModified.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }
