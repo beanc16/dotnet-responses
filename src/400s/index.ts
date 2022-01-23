@@ -1,6 +1,9 @@
 // 400
 export { BadRequest } from "./BadRequest";
 
+// 401
+export { Unauthorized } from "./Unauthorized";
+
 // 404s
 export { NotFound } from "./NotFound";
 export { InvalidUrlError } from "./InvalidUrlError";
