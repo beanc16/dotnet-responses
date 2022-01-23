@@ -7,14 +7,14 @@ export class InvalidUrlError extends NotFound
 {
     constructor({
         res,
-        message,
+        message = "Invalid URL",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         super({
             res,
-            message: message ?? "Invalid URL",
+            message,
             data,
             error,
         });

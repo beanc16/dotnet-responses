@@ -6,13 +6,12 @@ export class NotFound extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Not Found",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(404);
-        message = message ?? "Not Found";
         
         super({
             res,

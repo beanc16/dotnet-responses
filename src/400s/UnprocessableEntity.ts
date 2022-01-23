@@ -6,13 +6,12 @@ export class UnprocessableEntity extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Unprocessable Entity",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(422);
-        message = message ?? "Unprocessable Entity";
         
         super({
             res,

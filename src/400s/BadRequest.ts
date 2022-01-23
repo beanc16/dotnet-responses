@@ -6,13 +6,12 @@ export class BadRequest extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Bad Request",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(400);
-        message = message ?? "Bad Request";
         
         super({
             res,

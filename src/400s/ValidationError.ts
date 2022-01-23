@@ -7,14 +7,14 @@ export class ValidationError extends UnprocessableEntity
 {
     constructor({
         res,
-        message,
+        message = "Validation Error",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         super({
             res,
-            message: message ?? "Validation Error",
+            message,
             data,
             error,
         });

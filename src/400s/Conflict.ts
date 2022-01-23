@@ -6,13 +6,12 @@ export class Conflict extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Conflict",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(409);
-        message = message ?? "Conflict";
         
         super({
             res,

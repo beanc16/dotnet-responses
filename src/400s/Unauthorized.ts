@@ -6,13 +6,12 @@ export class Unauthorized extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Unauthorized",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(401);
-        message = message ?? "Unauthorized";
         
         super({
             res,

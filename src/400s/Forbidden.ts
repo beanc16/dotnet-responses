@@ -6,13 +6,12 @@ export class Forbidden extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Forbidden",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(403);
-        message = message ?? "Forbidden";
         
         super({
             res,
