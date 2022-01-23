@@ -7,6 +7,15 @@ export class ResponseWithStatus extends Response
     private res;
     private functionMap;
 
+    private get clone()
+    {
+        return {
+            ...this,
+            res: undefined,
+            functionMap: undefined,
+        };
+    }
+
     constructor({
         res,
         statusCode,
@@ -32,12 +41,12 @@ export class ResponseWithStatus extends Response
 
             // Only add the functions if they exist
             this.functionMap = {
-                ...(this.res.status && { status: this.res.status }),
-                ...(this.res.sendStatus && { sendStatus: this.res.sendStatus }),
-                ...(this.res.send && { send: this.res.send }),
-                ...(this.res.json && { json: this.res.json }),
-                ...(this.res.jsonp && { jsonp: this.res.jsonp }),
-                ...(this.res.end && { end: this.res.end }),
+                ...(this.res.status && { status: (_) => this.res.status(_) }),
+                ...(this.res.sendStatus && { sendStatus: (_) => this.res.sendStatus(_) }),
+                ...(this.res.send && { send: (_) => this.res.send(_) }),
+                ...(this.res.json && { json: (_) => this.res.json(_) }),
+                ...(this.res.jsonp && { jsonp: (_) => this.res.jsonp(_) }),
+                ...(this.res.end && { end: (_) => this.res.end(_) }),
             };
         }
     }
@@ -117,7 +126,7 @@ export class ResponseWithStatus extends Response
         // Call function
         if (passThisAsParam)
         {
-            return this.functionMap[functionName](this);
+            return this.functionMap[functionName](this.clone);
         }
         else if (data)
         {

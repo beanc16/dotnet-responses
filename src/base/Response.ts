@@ -20,8 +20,8 @@ export class Response
         this.statusCode = (statusCode)
                             ? statusCode
                             : 200;
-        this.message = message;
-        this.data = data;
-        this.error = error;
+        this.message = (message) ? message : null;
+        this.data = (data) ? data : null;
+        this.error = (error) ? error : null;
     }
 }
