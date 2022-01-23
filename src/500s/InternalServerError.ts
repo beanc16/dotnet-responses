@@ -11,10 +11,9 @@ export class InternalServerError extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(500);
-        
         super({
             res,
+            statusCode: 500,
             message,
             data,
             error,

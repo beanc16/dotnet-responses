@@ -11,10 +11,9 @@ export class BadGateway extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(502);
-        
         super({
             res,
+            statusCode: 502,
             message,
             data,
             error,

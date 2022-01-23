@@ -11,10 +11,9 @@ export class NotExtended extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(510);
-        
         super({
             res,
+            statusCode: 510,
             message,
             data,
             error,

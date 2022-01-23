@@ -11,10 +11,9 @@ export class GatewayTimeout extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(504);
-        
         super({
             res,
+            statusCode: 504,
             message,
             data,
             error,

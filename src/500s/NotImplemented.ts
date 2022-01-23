@@ -11,10 +11,9 @@ export class NotImplemented extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(501);
-        
         super({
             res,
+            statusCode: 501,
             message,
             data,
             error,

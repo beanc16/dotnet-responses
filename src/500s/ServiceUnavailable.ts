@@ -11,10 +11,9 @@ export class ServiceUnavailable extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(503);
-        
         super({
             res,
+            statusCode: 503,
             message,
             data,
             error,

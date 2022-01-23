@@ -11,10 +11,9 @@ export class NetworkAuthenticationRequired extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(511);
-        
         super({
             res,
+            statusCode: 511,
             message,
             data,
             error,
