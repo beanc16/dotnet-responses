@@ -19,7 +19,7 @@ function getResult(params?: object)
 
 
 // Tests
-test("Okay - Empty Params", function ()
+test("Ok - Empty Params", function ()
 {
     const response = new Ok();
     const result = getResult();
@@ -28,10 +28,40 @@ test("Okay - Empty Params", function ()
 });
 
 
-test("Response - Undefined Params", function ()
+test("Ok - Undefined Params", function ()
 {
     const params = {
         res: undefined,
+    };
+
+    const response = new Ok(params);
+    const result = getResult(params);
+
+    expect(response).toEqual(result);
+});
+
+
+test(`Ok - message="hi"`, function ()
+{
+    const params = {
+        res: undefined,
+        message: "hi",
+    };
+
+    const response = new Ok(params);
+    const result = getResult(params);
+
+    expect(response).toEqual(result);
+});
+
+
+test(`Ok - data={ foo: "bar" }`, function ()
+{
+    const params = {
+        res: undefined,
+        data: {
+            foo: "bar",
+        }
     };
 
     const response = new Ok(params);
