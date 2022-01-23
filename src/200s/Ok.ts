@@ -19,7 +19,6 @@ export class Ok extends ResponseWithStatus
         res,
         message = Ok.defaultParams.message,
         data,
-        error,
     }: ResponseParamsWithNoStatus = Ok.defaultParams)
     {
         super({
@@ -27,7 +26,6 @@ export class Ok extends ResponseWithStatus
             statusCode: Ok.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }
