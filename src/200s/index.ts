@@ -5,5 +5,14 @@ export { Success } from "./Success";
 // 201
 export { Created } from "./Created";
 
+// 202
+export { Accepted } from "./Accepted";
+
+// 203
+export { NonAuthoritativeInformation } from "./NonAuthoritativeInformation";
+
 // 204
 export { NoContent } from "./NoContent";
+
+// 205
+export { ResetContent } from "./ResetContent";
