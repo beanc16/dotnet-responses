@@ -12,6 +12,7 @@ export class NotFound extends ResponseWithStatus
     }: ResponseParamsWithNoStatus)
     {
         res.status(404);
+        message = message ?? "Not Found";
         
         super({
             res,

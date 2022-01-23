@@ -15,7 +15,7 @@ export class Created extends ResponseWithStatus
         
         super({
             res,
-            message,
+            message: message ?? "Created",
             data,
             error,
         });

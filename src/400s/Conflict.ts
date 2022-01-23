@@ -12,6 +12,7 @@ export class Conflict extends ResponseWithStatus
     }: ResponseParamsWithNoStatus)
     {
         res.status(409);
+        message = message ?? "Conflict";
         
         super({
             res,

@@ -12,6 +12,7 @@ export class UnprocessableEntity extends ResponseWithStatus
     }: ResponseParamsWithNoStatus)
     {
         res.status(422);
+        message = message ?? "Unprocessable Entity";
         
         super({
             res,

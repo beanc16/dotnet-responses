@@ -12,6 +12,7 @@ export class BadRequest extends ResponseWithStatus
     }: ResponseParamsWithNoStatus)
     {
         res.status(400);
+        message = message ?? "Bad Request";
         
         super({
             res,

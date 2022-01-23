@@ -15,7 +15,7 @@ export class Ok extends ResponseWithStatus
         
         super({
             res,
-            message,
+            message: message ?? "Ok",
             data,
             error,
         });
