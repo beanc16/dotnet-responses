@@ -24,7 +24,7 @@ function getResult(params?: object)
 
 function getExpressResponse() : ExpressResponse
 {
-    let output = {
+    const output = {
         status: expressRes.status,
         statusCode: expressRes.statusCode,
     };
