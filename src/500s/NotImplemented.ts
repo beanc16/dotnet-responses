@@ -2,7 +2,7 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 
 
-export class InternalServerError extends ResponseWithStatus
+export class NotImplemented extends ResponseWithStatus
 {
     constructor({
         res,
@@ -11,7 +11,7 @@ export class InternalServerError extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(500);
+        res.status(501);
         message = message ?? "Internal Server Error";
         
         super({
