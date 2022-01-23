@@ -11,8 +11,10 @@ export class Ok extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
+        res.status(200);
+        
         super({
-            statusCode: res.statusCode = 200,
+            res,
             message,
             data,
             error,
