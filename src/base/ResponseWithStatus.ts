@@ -1,4 +1,8 @@
 import { Response, ResponseParamsWithStatus } from ".";
+import {
+    ResDoesNotExistError,
+    ResFunctionDoesNotExistError,
+} from './errors';
 
 
 
@@ -116,11 +120,11 @@ export class ResponseWithStatus extends Response
         // Throw errors
         if (!this.res)
         {
-            throw new Error(`res does not exist.`);
+            throw new ResDoesNotExistError();
         }
         if (!this.functionMap[functionName])
         {
-            throw new Error(`res.${functionName} does not exist.`);
+            throw new ResFunctionDoesNotExistError(functionName);
         }
 
         // Call function
@@ -148,7 +152,7 @@ export class ResponseWithStatus extends Response
 
         // Run the function
         const response = new ResponseWithStatus(params);
-        response.status();
+        return response.status();
     }
 
     static sendStatus(params: ResponseParamsWithStatus)
@@ -158,7 +162,7 @@ export class ResponseWithStatus extends Response
 
         // Run the function
         const response = new ResponseWithStatus(params);
-        response.sendStatus();
+        return response.sendStatus();
     }
 
     static send(params: ResponseParamsWithStatus)
@@ -168,7 +172,7 @@ export class ResponseWithStatus extends Response
 
         // Run the function
         const response = new ResponseWithStatus(params);
-        response.send();
+        return response.send();
     }
 
     static json(params: ResponseParamsWithStatus)
@@ -178,7 +182,7 @@ export class ResponseWithStatus extends Response
 
         // Run the function
         const response = new ResponseWithStatus(params);
-        response.json();
+        return response.json();
     }
 
     static jsonp(params: ResponseParamsWithStatus)
@@ -188,7 +192,7 @@ export class ResponseWithStatus extends Response
 
         // Run the function
         const response = new ResponseWithStatus(params);
-        response.jsonp();
+        return response.jsonp();
     }
 
     static end(params: ResponseParamsWithStatus)
@@ -198,7 +202,7 @@ export class ResponseWithStatus extends Response
 
         // Run the function
         const response = new ResponseWithStatus(params);
-        response.end();
+        return response.end();
     }
 }
 
