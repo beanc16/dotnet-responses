@@ -1,9 +1,4 @@
-export interface ExpressResponse
-{
-    statusCode: number;
-    status: Function;
-    [key: string]: any;
-}
+import { ExpressResponse } from '.';
 
 export interface ResponseParamsWithNoStatus
 {

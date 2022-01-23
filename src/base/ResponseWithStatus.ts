@@ -1,4 +1,4 @@
-import { Response, ResponseParamsWithNoStatus } from ".";
+import { Response, ResponseParamsWithStatus } from ".";
 
 
 
@@ -9,13 +9,18 @@ export class ResponseWithStatus extends Response
 
     constructor({
         res,
+        statusCode,
         message,
         data,
         error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithStatus)
     {
         super({
-            statusCode: (res) ? res.statusCode : undefined,
+            statusCode: (statusCode)
+                        ? statusCode
+                        : (res)
+                        ? res.statusCode
+                        : undefined,
             message,
             data,
             error,
