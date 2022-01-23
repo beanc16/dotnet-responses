@@ -10,18 +10,24 @@ export class Response
     data?: any;
     error?: object;
 
+    protected static defaultParams = {
+        statusCode: 200,
+        message: null,
+        data: null,
+        error: null,
+    };
+
+
     constructor({
         statusCode,
         message,
         data,
         error,
-    }: ResponseParamsWithStatus)
+    }: ResponseParamsWithStatus = Response.defaultParams)
     {
-        this.statusCode = (statusCode)
-                            ? statusCode
-                            : 200;
-        this.message = (message) ? message : null;
-        this.data = (data) ? data : null;
-        this.error = (error) ? error : null;
+        this.statusCode = statusCode;
+        this.message = message;
+        this.data = data;
+        this.error = error;
     }
 }

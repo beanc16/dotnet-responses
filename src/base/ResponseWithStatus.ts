@@ -143,36 +143,60 @@ export class ResponseWithStatus extends Response
     // Static versions of above functions
     static status(params: ResponseParamsWithStatus)
     {
+        // Set message from subclass if one isn't given
+        params.message = params.message ?? this.defaultParams.message;
+
+        // Run the function
         const response = new ResponseWithStatus(params);
         response.status();
     }
 
     static sendStatus(params: ResponseParamsWithStatus)
     {
+        // Set message from subclass if one isn't given
+        params.message = params.message ?? this.defaultParams.message;
+
+        // Run the function
         const response = new ResponseWithStatus(params);
         response.sendStatus();
     }
 
     static send(params: ResponseParamsWithStatus)
     {
+        // Set message from subclass if one isn't given
+        params.message = params.message ?? this.defaultParams.message;
+
+        // Run the function
         const response = new ResponseWithStatus(params);
         response.send();
     }
 
     static json(params: ResponseParamsWithStatus)
     {
+        // Set message from subclass if one isn't given
+        params.message = params.message ?? this.defaultParams.message;
+
+        // Run the function
         const response = new ResponseWithStatus(params);
         response.json();
     }
 
     static jsonp(params: ResponseParamsWithStatus)
     {
+        // Set message from subclass if one isn't given
+        params.message = params.message ?? this.defaultParams.message;
+
+        // Run the function
         const response = new ResponseWithStatus(params);
         response.jsonp();
     }
 
     static end(params: ResponseParamsWithStatus)
     {
+        // Set message from subclass if one isn't given
+        params.message = params.message ?? this.defaultParams.message;
+
+        // Run the function
         const response = new ResponseWithStatus(params);
         response.end();
     }
