@@ -6,7 +6,7 @@ export class ResetContent extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Reset Content",
         data,
         error,
     }: ResponseParamsWithNoStatus)
@@ -15,7 +15,7 @@ export class ResetContent extends ResponseWithStatus
         
         super({
             res,
-            message: message ?? "Reset Content",
+            message,
             data,
             error,
         });

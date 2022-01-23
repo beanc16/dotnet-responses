@@ -6,7 +6,7 @@ export class Created extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Created",
         data,
         error,
     }: ResponseParamsWithNoStatus)
@@ -15,7 +15,7 @@ export class Created extends ResponseWithStatus
         
         super({
             res,
-            message: message ?? "Created",
+            message,
             data,
             error,
         });

@@ -7,14 +7,14 @@ export class Success extends Ok
 {
     constructor({
         res,
-        message,
+        message = "Success",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         super({
             res,
-            message: message ?? "Success",
+            message,
             data,
             error,
         });

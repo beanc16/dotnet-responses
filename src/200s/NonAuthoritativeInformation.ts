@@ -6,7 +6,7 @@ export class NonAuthoritativeInformation extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Non-Authoritative Information",
         data,
         error,
     }: ResponseParamsWithNoStatus)
@@ -15,7 +15,7 @@ export class NonAuthoritativeInformation extends ResponseWithStatus
         
         super({
             res,
-            message: message ?? "Non-Authoritative Information",
+            message,
             data,
             error,
         });

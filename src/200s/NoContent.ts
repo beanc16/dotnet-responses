@@ -6,7 +6,7 @@ export class NoContent extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "No Content",
         data,
         error,
     }: ResponseParamsWithNoStatus)
@@ -15,7 +15,7 @@ export class NoContent extends ResponseWithStatus
         
         super({
             res,
-            message: message ?? "No Content",
+            message,
             data,
             error,
         });

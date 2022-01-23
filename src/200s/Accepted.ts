@@ -6,7 +6,7 @@ export class Accepted extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Accepted",
         data,
         error,
     }: ResponseParamsWithNoStatus)
@@ -15,7 +15,7 @@ export class Accepted extends ResponseWithStatus
         
         super({
             res,
-            message: message ?? "Accepted",
+            message,
             data,
             error,
         });
