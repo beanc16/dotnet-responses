@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class Accepted extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 202,
+        message: "Accepted",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Accepted",
+        message = Accepted.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = Accepted.defaultParams)
     {
         super({
             res,
-            statusCode: 202,
+            statusCode: Accepted.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }

@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class PartialContent extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 206,
+        message: "Partial Content",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Partial Content",
+        message = PartialContent.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = PartialContent.defaultParams)
     {
         super({
             res,
-            statusCode: 206,
+            statusCode: PartialContent.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }
