@@ -1,6 +1,6 @@
 {
   "name": "dotnet-responses",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A collection of response classes that mimic ASP.NET responses",
   "main": "index.ts",
   "keywords": [
