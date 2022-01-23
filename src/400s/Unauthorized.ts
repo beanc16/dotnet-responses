@@ -4,16 +4,24 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class Unauthorized extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 401,
+        message: "Unauthorized",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Unauthorized",
+        message = Unauthorized.defaultParams.message,
         data,
         error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = Unauthorized.defaultParams)
     {
         super({
             res,
-            statusCode: 401,
+            statusCode: Unauthorized.defaultParams.statusCode,
             message,
             data,
             error,

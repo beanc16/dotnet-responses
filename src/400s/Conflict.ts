@@ -4,16 +4,24 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class Conflict extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 409,
+        message: "Conflict",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Conflict",
+        message = Conflict.defaultParams.message,
         data,
         error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = Conflict.defaultParams)
     {
         super({
             res,
-            statusCode: 409,
+            statusCode: Conflict.defaultParams.statusCode,
             message,
             data,
             error,
