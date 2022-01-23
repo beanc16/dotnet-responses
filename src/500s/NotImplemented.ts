@@ -12,7 +12,7 @@ export class NotImplemented extends ResponseWithStatus
     }: ResponseParamsWithNoStatus)
     {
         res.status(501);
-        message = message ?? "Internal Server Error";
+        message = message ?? "Not Implemented";
         
         super({
             res,
