@@ -4,16 +4,24 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class NotImplemented extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 501,
+        message: "Not Implemented",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Not Implemented",
+        message = NotImplemented.defaultParams.message,
         data,
         error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = NotImplemented.defaultParams)
     {
         super({
             res,
-            statusCode: 501,
+            statusCode: NotImplemented.defaultParams.statusCode,
             message,
             data,
             error,

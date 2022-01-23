@@ -4,16 +4,24 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class GatewayTimeout extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 504,
+        message: "Gateway Timeout",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Gateway Timeout",
+        message = GatewayTimeout.defaultParams.message,
         data,
         error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = GatewayTimeout.defaultParams)
     {
         super({
             res,
-            statusCode: 504,
+            statusCode: GatewayTimeout.defaultParams.statusCode,
             message,
             data,
             error,

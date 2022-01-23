@@ -4,16 +4,24 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class NotExtended extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 510,
+        message: "Not Extended",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Not Extended",
+        message = NotExtended.defaultParams.message,
         data,
         error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = NotExtended.defaultParams)
     {
         super({
             res,
-            statusCode: 510,
+            statusCode: NotExtended.defaultParams.statusCode,
             message,
             data,
             error,
