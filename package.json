@@ -5,7 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
-    "lint": "npx eslint . --ext .ts"
+    "lint": "npx eslint . --ext .ts",
+    "test": "jest --config jestconfig.json"
   },
   "keywords": [
     "dotnet",
@@ -22,10 +23,16 @@
     "url": "https://github.com/beanc16/dotnet-responses/issues"
   },
   "homepage": "https://github.com/beanc16/dotnet-responses#readme",
+  "files": [
+    "lib/**/*"
+  ],
   "devDependencies": {
+    "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.3",
     "typescript": "^4.5.5"
   }
 }
