@@ -15,6 +15,7 @@
     "url": "https://github.com/beanc16/dotnet-responses"
   },
   "scripts": {
+    "build": "tsc",
     "lint": "npx eslint . --ext .ts"
   },
   "devDependencies": {
