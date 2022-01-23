@@ -11,10 +11,9 @@ export class NoContent extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(204);
-        
         super({
             res,
+            statusCode: 204,
             message,
             data,
             error,

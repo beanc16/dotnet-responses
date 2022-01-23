@@ -11,10 +11,9 @@ export class PartialContent extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(206);
-        
         super({
             res,
+            statusCode: 206,
             message,
             data,
             error,

@@ -11,10 +11,9 @@ export class ResetContent extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(205);
-        
         super({
             res,
+            statusCode: 205,
             message,
             data,
             error,

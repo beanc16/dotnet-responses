@@ -11,10 +11,9 @@ export class Created extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(201);
-        
         super({
             res,
+            statusCode: 201,
             message,
             data,
             error,

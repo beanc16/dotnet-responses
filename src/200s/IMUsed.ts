@@ -11,10 +11,9 @@ export class IMUsed extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(226);
-        
         super({
             res,
+            statusCode: 226,
             message,
             data,
             error,

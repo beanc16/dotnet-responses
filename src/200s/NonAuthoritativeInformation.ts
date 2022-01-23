@@ -11,10 +11,9 @@ export class NonAuthoritativeInformation extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(203);
-        
         super({
             res,
+            statusCode: 203,
             message,
             data,
             error,

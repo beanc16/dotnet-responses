@@ -11,10 +11,9 @@ export class Accepted extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(202);
-        
         super({
             res,
+            statusCode: 202,
             message,
             data,
             error,
