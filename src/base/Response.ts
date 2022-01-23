@@ -25,9 +25,9 @@ export class Response
         error,
     }: ResponseParamsWithStatus = Response.defaultParams)
     {
-        this.statusCode = statusCode;
-        this.message = message;
-        this.data = data;
-        this.error = error;
+        this.statusCode = (statusCode) ? statusCode : Response.defaultParams.statusCode;
+        this.message = (message) ? message : Response.defaultParams.message;
+        this.data = (data) ? data : Response.defaultParams.data;
+        this.error = (error) ? error : Response.defaultParams.error;
     }
 }
