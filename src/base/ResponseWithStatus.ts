@@ -137,6 +137,45 @@ export class ResponseWithStatus extends Response
             return this.functionMap[functionName]();
         }
     }
+
+
+
+    // Static versions of above functions
+    static status(params: ResponseParamsWithStatus)
+    {
+        const response = new ResponseWithStatus(params);
+        response.status();
+    }
+
+    static sendStatus(params: ResponseParamsWithStatus)
+    {
+        const response = new ResponseWithStatus(params);
+        response.sendStatus();
+    }
+
+    static send(params: ResponseParamsWithStatus)
+    {
+        const response = new ResponseWithStatus(params);
+        response.send();
+    }
+
+    static json(params: ResponseParamsWithStatus)
+    {
+        const response = new ResponseWithStatus(params);
+        response.json();
+    }
+
+    static jsonp(params: ResponseParamsWithStatus)
+    {
+        const response = new ResponseWithStatus(params);
+        response.jsonp();
+    }
+
+    static end(params: ResponseParamsWithStatus)
+    {
+        const response = new ResponseWithStatus(params);
+        response.end();
+    }
 }
 
 
