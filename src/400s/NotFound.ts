@@ -11,10 +11,9 @@ export class NotFound extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(404);
-        
         super({
             res,
+            statusCode: 404,
             message,
             data,
             error,

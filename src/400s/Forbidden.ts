@@ -11,10 +11,9 @@ export class Forbidden extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(403);
-        
         super({
             res,
+            statusCode: 403,
             message,
             data,
             error,

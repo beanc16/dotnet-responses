@@ -11,10 +11,9 @@ export class UnprocessableEntity extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(422);
-        
         super({
             res,
+            statusCode: 422,
             message,
             data,
             error,

@@ -11,10 +11,9 @@ export class Unauthorized extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(401);
-        
         super({
             res,
+            statusCode: 401,
             message,
             data,
             error,

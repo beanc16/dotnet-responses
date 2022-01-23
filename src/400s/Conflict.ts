@@ -11,10 +11,9 @@ export class Conflict extends ResponseWithStatus
         error,
     }: ResponseParamsWithNoStatus)
     {
-        res.status(409);
-        
         super({
             res,
+            statusCode: 409,
             message,
             data,
             error,
