@@ -6,13 +6,12 @@ export class ServiceUnavailable extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Service Unavailable",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(503);
-        message = message ?? "Service Unavailable";
         
         super({
             res,

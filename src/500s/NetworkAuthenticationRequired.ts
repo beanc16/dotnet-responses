@@ -6,13 +6,12 @@ export class NetworkAuthenticationRequired extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Network Authentication Required",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(511);
-        message = message ?? "Network Authentication Required";
         
         super({
             res,

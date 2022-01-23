@@ -6,13 +6,12 @@ export class InternalServerError extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Internal Server Error",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(500);
-        message = message ?? "Internal Server Error";
         
         super({
             res,

@@ -6,13 +6,12 @@ export class NotImplemented extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Not Implemented",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(501);
-        message = message ?? "Not Implemented";
         
         super({
             res,

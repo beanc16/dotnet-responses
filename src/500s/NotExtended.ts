@@ -6,13 +6,12 @@ export class NotExtended extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Not Extended",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(510);
-        message = message ?? "Not Extended";
         
         super({
             res,

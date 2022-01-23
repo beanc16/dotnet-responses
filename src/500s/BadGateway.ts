@@ -6,13 +6,12 @@ export class BadGateway extends ResponseWithStatus
 {
     constructor({
         res,
-        message,
+        message = "Bad Gateway",
         data,
         error,
     }: ResponseParamsWithNoStatus)
     {
         res.status(502);
-        message = message ?? "Bad Gateway";
         
         super({
             res,
