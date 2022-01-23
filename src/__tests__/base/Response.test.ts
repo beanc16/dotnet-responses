@@ -1,4 +1,4 @@
-import { Response } from '../../base/Response';
+import { Response } from "../../base/Response";
 
 
 
@@ -10,7 +10,7 @@ const defaultResponse = {
     error: null,
 };
 
-function getResult(params: object)
+function getResult(params?: object)
 {
     return Object.assign({}, defaultResponse, params);
 }
@@ -19,6 +19,15 @@ function getResult(params: object)
 
 // Tests
 test("Response - Empty Params", function ()
+{
+    const response = new Response();
+    const result = getResult();
+
+    expect(response).toEqual(result);
+});
+
+
+test("Response - Undefined Params", function ()
 {
     const params = {
     };

@@ -4,19 +4,25 @@ import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
 
 export class MovedPermanently extends ResponseWithStatus
 {
+    protected static override defaultParams = {
+        res: undefined,
+        statusCode: 301,
+        message: "Moved Permanently",
+        data: null,
+        error: null,
+    };
+
     constructor({
         res,
-        message = "Moved Permanently",
+        message = MovedPermanently.defaultParams.message,
         data,
-        error,
-    }: ResponseParamsWithNoStatus)
+    }: ResponseParamsWithNoStatus = MovedPermanently.defaultParams)
     {
         super({
             res,
-            statusCode: 301,
+            statusCode: MovedPermanently.defaultParams.statusCode,
             message,
             data,
-            error,
         });
     }
 }
