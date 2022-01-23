@@ -5,6 +5,9 @@ import { Response } from '../../base/Response';
 // Helpers
 const defaultResponse = {
     statusCode: 200,
+    message: null,
+    data: null,
+    error: null,
 };
 
 function getResult(params: object)
