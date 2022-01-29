@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class IMUsed extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 226,
-        message: "Instance-Manipulations Used",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[200].IMUsed;
 
     constructor({
         res,

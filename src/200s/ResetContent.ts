@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class ResetContent extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 205,
-        message: "Reset Content",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[200].ResetContent;
 
     constructor({
         res,

@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class NoContent extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 204,
-        message: "No Content",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[200].NoContent;
 
     constructor({
         res,

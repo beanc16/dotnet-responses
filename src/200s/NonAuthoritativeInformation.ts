@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class NonAuthoritativeInformation extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 203,
-        message: "Non-Authoritative Information",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[200].NonAuthoritativeInformation;
 
     constructor({
         res,
