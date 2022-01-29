@@ -218,7 +218,17 @@ for (const [responseName, ResponseModel] of Object.entries(Responses100s))
         expect(params.res).toEqual(result);
     });
     
-    // TODO: end
+    
+    test(`${responseName} - end`, function ()
+    {
+        const params = {
+            res: getExpressResponse(),
+        };
+    
+        const response = new ResponseModel(params);
+    
+        expect(() => response.end()).toThrowError(ResFunctionDoesNotExistError);
+    });
     
     
     // Static functions
@@ -303,5 +313,14 @@ for (const [responseName, ResponseModel] of Object.entries(Responses100s))
         expect(params.res).toEqual(result);
     });
     
-    // TODO: Static end    
+    
+    test(`${responseName} static - end`, function ()
+    {
+        const params = {
+            res: getExpressResponse(),
+        };
+    
+        // Express throws TypeError for non-live responses
+        expect(() => ResponseModel.end(params)).toThrowError(ResFunctionDoesNotExistError);
+    });
 }
