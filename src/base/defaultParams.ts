@@ -1,4 +1,28 @@
 export const defaultParams = {
+    100: {
+        Continue: {
+            res: undefined,
+            statusCode: 100,
+            message: "Continue",
+            data: null,
+            error: null,
+        },
+        SwitchingProtocols: {
+            res: undefined,
+            statusCode: 101,
+            message: "Switching Protocols",
+            data: null,
+            error: null,
+        },
+        Processing: {
+            res: undefined,
+            statusCode: 102,
+            message: "Processing",
+            data: null,
+            error: null,
+        },
+    },
+
     200: {
         Ok: {
             res: undefined,
