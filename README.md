@@ -92,7 +92,7 @@ app.listen(3000);
 - 400: BadRequest
 - 401: Unauthorized
 - 403: Forbidden
-- 404: InvalidUrlError
+- 404: InvalidUrl
 - 404: NotFound
 - 405: MethodNotAllowed
 - 406: NotAcceptable
@@ -135,6 +135,9 @@ app.listen(3000);
 - 511: NetworkAuthenticationRequired
 - 598: NetworkReadTimeoutError
 - 599: NetworkConnectTimeoutError
+
+### Base
+- Response
 
 
 

@@ -3,17 +3,17 @@ import { NotFound } from "./NotFound";
 
 
 
-export class InvalidUrlError extends NotFound
+export class InvalidUrl extends NotFound
 {
-    protected static override defaultParams = defaultParams[400].InvalidUrlError;
+    protected static override defaultParams = defaultParams[400].InvalidUrl;
 
 
     constructor({
         res,
-        message = InvalidUrlError.defaultParams.message,
+        message = InvalidUrl.defaultParams.message,
         data,
         error,
-    }: ResponseParamsWithNoStatus = InvalidUrlError.defaultParams)
+    }: ResponseParamsWithNoStatus = InvalidUrl.defaultParams)
     {
         super({
             res,

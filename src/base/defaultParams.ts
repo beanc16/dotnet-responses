@@ -184,7 +184,7 @@ export const defaultParams = {
             data: null,
             error: null,
         },
-        InvalidUrlError: {
+        InvalidUrl: {
             res: undefined,
             statusCode: 404,
             message: "Invalid URL",

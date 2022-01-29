@@ -9,7 +9,7 @@ export { Forbidden } from "./Forbidden";
 
 // 404s
 export { NotFound } from "./NotFound";
-export { InvalidUrlError } from "./InvalidUrlError";
+export { InvalidUrl } from "./InvalidUrl";
 
 // 405
 export { MethodNotAllowed } from "./MethodNotAllowed";
