@@ -42,6 +42,7 @@ export class ResponseWithStatus extends Response
         if (res)
         {
             this.res = res;
+            this.res.status(this.statusCode);
 
             // Only add the functions if they exist
             this.functionMap = {
