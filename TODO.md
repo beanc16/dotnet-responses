@@ -1,5 +1,5 @@
 # TODO
 
-## Tests
-- [ ] Write tests for all necessary base files
-- [ ] Combine 200s-500s unit tests into one file? Or keep separate? Make a decision and do it. 
+- Write remaining tests for all necessary base files
+- Write usage documentation in README
+- Research and include any other helpful sections in README
