@@ -1,6 +1,6 @@
 {
   "name": "dotnet-responses",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A collection of response classes that mimic ASP.NET responses",
   "author": {
     "name": "beanc16",
