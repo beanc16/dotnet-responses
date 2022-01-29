@@ -21,10 +21,10 @@ export { ResetContent } from "./ResetContent";
 export { PartialContent } from "./PartialContent";
 
 // 207
-// TODO
+export { MultiStatus } from "./MultiStatus";
 
 // 208
-// TODO
+export { AlreadyReported } from "./AlreadyReported";
 
 // 226
 export { IMUsed } from "./IMUsed";

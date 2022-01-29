@@ -56,6 +56,20 @@ export const defaultParams = {
             data: null,
             error: null,
         },
+        MultiStatus: {
+            res: undefined,
+            statusCode: 207,
+            message: "Multi-Status",
+            data: null,
+            error: null,
+        },
+        AlreadyReported: {
+            res: undefined,
+            statusCode: 208,
+            message: "Already Reported",
+            data: null,
+            error: null,
+        },
         IMUsed: {
             res: undefined,
             statusCode: 226,
