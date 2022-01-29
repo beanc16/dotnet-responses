@@ -25,7 +25,12 @@
     "responses",
     "response models",
     "response classes",
-    "response objects"
+    "response objects",
+    "express responses",
+    "rest responses",
+    "api responses",
+    "c# responses",
+    "mvc responses"
   ],
   "repository": {
     "type": "git",
