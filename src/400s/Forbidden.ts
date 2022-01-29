@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class Forbidden extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 403,
-        message: "Forbidden",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[400].Forbidden;
 
     constructor({
         res,

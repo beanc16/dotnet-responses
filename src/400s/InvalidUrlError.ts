@@ -1,17 +1,11 @@
-import { ResponseParamsWithNoStatus } from "../base";
+import { ResponseParamsWithNoStatus, defaultParams } from "../base";
 import { NotFound } from "./NotFound";
 
 
 
 export class InvalidUrlError extends NotFound
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 404,
-        message: "Invalid URL",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[400].NotFound;
 
 
     constructor({

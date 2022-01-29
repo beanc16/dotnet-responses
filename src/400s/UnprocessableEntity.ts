@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class UnprocessableEntity extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 422,
-        message: "Unprocessable Entity",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[400].UnprocessableEntity;
 
     constructor({
         res,

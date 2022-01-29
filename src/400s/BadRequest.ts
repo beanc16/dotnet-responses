@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class BadRequest extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 400,
-        message: "Bad Request",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[400].BadRequest;
 
     constructor({
         res,

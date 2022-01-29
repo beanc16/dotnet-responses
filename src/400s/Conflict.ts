@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class Conflict extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 409,
-        message: "Conflict",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[400].Conflict;
 
     constructor({
         res,
