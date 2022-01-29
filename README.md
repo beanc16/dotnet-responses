@@ -19,6 +19,8 @@ $ npm install dotnet-responses
 
 
 ## Usage
+
+### Basic
 ```js
 const express = require('express');
 const app = express();
@@ -53,6 +55,86 @@ app.get('/ok-static', function (req, res) {
 
 app.listen(3000);
 ```
+
+
+
+## Response Types
+
+### 100s
+- 100: Continue
+- 101: SwitchingProtocols
+- 102: Processing
+
+### 200s
+- 200: Ok
+- 200: Success
+- 201: Created
+- 202: Accepted
+- 203: NonAuthoritativeInformation
+- 204: NoContent
+- 205: ResetContent
+- 206: PartialContent
+- 207: MultiStatus
+- 208: AlreadyReported
+- 226: IMUsed
+
+### 300s
+- 300: MultipleChoices
+- 301: MovedPermanently
+- 302: Found
+- 303: SeeOther
+- 304: NotModified
+- 305: UseProxy
+- 307: TemporaryRedirect
+- 308: PermanentRedirect
+
+### 400s
+- 400: BadRequest
+- 401: Unauthorized
+- 403: Forbidden
+- 404: InvalidUrlError
+- 404: NotFound
+- 405: MethodNotAllowed
+- 406: NotAcceptable
+- 407: ProxyAuthenticationError
+- 408: RequestTimeout
+- 409: Conflict
+- 410: Gone
+- 411: LengthRequired
+- 412: PreconditionFailed
+- 413: RequestEntityTooLarge
+- 414: RequestUriTooLong
+- 415: UnsupportedMediaType
+- 416: RequestedRangeNotSatisfiable
+- 417: ExpectationFailed
+- 422: UnprocessableEntity
+- 422: ValidationError
+- 423: Locked
+- 424: FailedDependency
+- 426: UpgradeRequired
+- 428: PreconditionRequired
+- 429: TooManyRequests
+- 431: RequestHeaderFieldsTooLarge
+- 444: NoResponse
+- 449: RetryWith
+- 451: UnavailableForLegalReasons
+- 499: ClientClosedRequest
+
+### 500s
+- 500: InternalServerError
+- 501: NotImplemented
+- 502: BadGateway
+- 503: ServiceUnavailable
+- 504: GatewayTimeout
+- 505: HttpVersionNotSupported
+- 506: VariantAlsoNegotiates
+- 507: InsufficientStorage
+- 508: LoopDetected
+- 509: BandwidthLimitExceeded
+- 510: NotExtended
+- 511: NetworkAuthenticationRequired
+- 598: NetworkReadTimeoutError
+- 599: NetworkConnectTimeoutError
 
 
 
