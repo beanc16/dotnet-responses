@@ -64,6 +64,66 @@ export const defaultParams = {
             error: null,
         },
     },
+
+    300: {
+        MultipleChoices: {
+            res: undefined,
+            statusCode: 300,
+            message: "Multiple Choices",
+            data: null,
+            error: null,
+        },
+        MovedPermanently: {
+            res: undefined,
+            statusCode: 301,
+            message: "Moved Permanently",
+            data: null,
+            error: null,
+        },
+        Found: {
+            res: undefined,
+            statusCode: 302,
+            message: "Found",
+            data: null,
+            error: null,
+        },
+        SeeOther: {
+            res: undefined,
+            statusCode: 303,
+            message: "See Other",
+            data: null,
+            error: null,
+        },
+        NotModified: {
+            res: undefined,
+            statusCode: 304,
+            message: "Not Modified",
+            data: null,
+            error: null,
+        },
+        UseProxy: {
+            res: undefined,
+            statusCode: 305,
+            message: "Use Proxy",
+            data: null,
+            error: null,
+        },
+        TemporaryRedirect: {
+            res: undefined,
+            statusCode: 307,
+            message: "Temporary Redirect",
+            data: null,
+            error: null,
+        },
+        PermanentRedirect: {
+            res: undefined,
+            statusCode: 308,
+            message: "Permanent Redirect",
+            data: null,
+            error: null,
+        },
+    },
+
     400: {
         BadRequest: {
             res: undefined,
