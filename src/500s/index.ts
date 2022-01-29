@@ -14,19 +14,19 @@ export { ServiceUnavailable } from './ServiceUnavailable';
 export { GatewayTimeout } from './GatewayTimeout';
 
 // 505
-// TODO
+export { HttpVersionNotSupported } from './HttpVersionNotSupported';
 
 // 506
-// TODO
+export { VariantAlsoNegotiates } from './VariantAlsoNegotiates';
 
 // 507
-// TODO
+export { InsufficientStorage } from './InsufficientStorage';
 
 // 508
-// TODO
+export { LoopDetected } from './LoopDetected';
 
 // 509
-// TODO
+export { BandwidthLimitExceeded } from './BandwidthLimitExceeded';
 
 // 510
 export { NotExtended } from './NotExtended';
@@ -35,7 +35,7 @@ export { NotExtended } from './NotExtended';
 export { NetworkAuthenticationRequired } from './NetworkAuthenticationRequired';
 
 // 598
-// TODO
+export { NetworkReadTimeoutError } from './NetworkReadTimeoutError';
 
 // 599
-// TODO
+export { NetworkConnectTimeoutError } from './NetworkConnectTimeoutError';
