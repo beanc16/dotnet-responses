@@ -72,5 +72,14 @@ export { TooManyRequests } from "./TooManyRequests";
 // 431
 export { RequestHeaderFieldsTooLarge } from "./RequestHeaderFieldsTooLarge";
 
+// 444
+export { NoResponse } from "./NoResponse";
+
+// 449
+export { RetryWith } from "./RetryWith";
+
 // 451
 export { UnavailableForLegalReasons } from "./UnavailableForLegalReasons";
+
+// 499
+export { ClientClosedRequest } from "./ClientClosedRequest";
