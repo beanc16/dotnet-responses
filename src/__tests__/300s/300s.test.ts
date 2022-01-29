@@ -1,11 +1,11 @@
 import * as Responses300s from "../../300s";
-import { defaultParams } from "../../base/defaultParams";
 import { response as expressRes } from "express";
-import { ExpressResponse } from "../../base";
 import {
+    ExpressResponse,
+    defaultParams,
     ResDoesNotExistError,
     ResFunctionDoesNotExistError,
-} from "../../base/errors";
+} from "../../base";
 
 
 
