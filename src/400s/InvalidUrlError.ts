@@ -5,7 +5,7 @@ import { NotFound } from "./NotFound";
 
 export class InvalidUrlError extends NotFound
 {
-    protected static override defaultParams = defaultParams[400].NotFound;
+    protected static override defaultParams = defaultParams[400].InvalidUrlError;
 
 
     constructor({
