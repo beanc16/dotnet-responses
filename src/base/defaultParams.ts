@@ -1,0 +1,60 @@
+export const defaultParams = {
+    400: {
+        BadRequest: {
+            res: undefined,
+            statusCode: 400,
+            message: "Bad Request",
+            data: null,
+            error: null,
+        },
+        Unauthorized: {
+            res: undefined,
+            statusCode: 401,
+            message: "Unauthorized",
+            data: null,
+            error: null,
+        },
+        Forbidden: {
+            res: undefined,
+            statusCode: 403,
+            message: "Forbidden",
+            data: null,
+            error: null,
+        },
+        InvalidUrlError: {
+            res: undefined,
+            statusCode: 404,
+            message: "Invalid URL",
+            data: null,
+            error: null,
+        },
+        NotFound: {
+            res: undefined,
+            statusCode: 404,
+            message: "Not Found",
+            data: null,
+            error: null,
+        },
+        Conflict: {
+            res: undefined,
+            statusCode: 409,
+            message: "Conflict",
+            data: null,
+            error: null,
+        },
+        UnprocessableEntity: {
+            res: undefined,
+            statusCode: 422,
+            message: "Unprocessable Entity",
+            data: null,
+            error: null,
+        },
+        ValidationError: {
+            res: undefined,
+            statusCode: 422,
+            message: "Validation Error",
+            data: null,
+            error: null,
+        },
+    },
+};

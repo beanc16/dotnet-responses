@@ -1,3 +1,6 @@
+// Objects
+export { defaultParams } from './defaultParams';
+
 // Interfaces
 export { ExpressResponse } from './ExpressResponse';
 export { ResponseParamsWithStatus } from './ResponseParamsWithStatus';
