@@ -1,4 +1,69 @@
 export const defaultParams = {
+    200: {
+        Ok: {
+            res: undefined,
+            statusCode: 200,
+            message: "Ok",
+            data: null,
+            error: null,
+        },
+        Success: {
+            res: undefined,
+            statusCode: 200,
+            message: "Success",
+            data: null,
+            error: null,
+        },
+        Created: {
+            res: undefined,
+            statusCode: 201,
+            message: "Created",
+            data: null,
+            error: null,
+        },
+        Accepted: {
+            res: undefined,
+            statusCode: 202,
+            message: "Accepted",
+            data: null,
+            error: null,
+        },
+        NonAuthoritativeInformation: {
+            res: undefined,
+            statusCode: 203,
+            message: "Non-Authoritative Information",
+            data: null,
+            error: null,
+        },
+        NoContent: {
+            res: undefined,
+            statusCode: 204,
+            message: "No Content",
+            data: null,
+            error: null,
+        },
+        ResetContent: {
+            res: undefined,
+            statusCode: 205,
+            message: "Reset Content",
+            data: null,
+            error: null,
+        },
+        PartialContent: {
+            res: undefined,
+            statusCode: 206,
+            message: "Partial Content",
+            data: null,
+            error: null,
+        },
+        IMUsed: {
+            res: undefined,
+            statusCode: 226,
+            message: "Instance-Manipulations Used",
+            data: null,
+            error: null,
+        },
+    },
     400: {
         BadRequest: {
             res: undefined,
