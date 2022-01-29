@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class NotExtended extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 510,
-        message: "Not Extended",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[500].NotExtended;
 
     constructor({
         res,

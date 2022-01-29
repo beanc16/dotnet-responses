@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class NetworkAuthenticationRequired extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 511,
-        message: "Network Authentication Required",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[500].NetworkAuthenticationRequired;
 
     constructor({
         res,

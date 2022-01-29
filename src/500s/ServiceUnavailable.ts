@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class ServiceUnavailable extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 503,
-        message: "Service Unavailable",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[500].ServiceUnavailable;
 
     constructor({
         res,

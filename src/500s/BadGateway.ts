@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class BadGateway extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 502,
-        message: "Bad Gateway",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[500].BadGateway;
 
     constructor({
         res,
