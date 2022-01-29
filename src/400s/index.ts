@@ -12,65 +12,65 @@ export { NotFound } from "./NotFound";
 export { InvalidUrlError } from "./InvalidUrlError";
 
 // 405
-// TODO
+export { MethodNotAllowed } from "./MethodNotAllowed";
 
 // 406
-// TODO
+export { NotAcceptable } from "./NotAcceptable";
 
 // 407
-// TODO
+export { ProxyAuthenticationError } from "./ProxyAuthenticationError";
 
 // 408
-// TODO
+export { RequestTimeout } from "./RequestTimeout";
 
 // 409
 export { Conflict } from "./Conflict";
 
 // 410
-// TODO
+export { Gone } from "./Gone";
 
 // 411
-// TODO
+export { LengthRequired } from "./LengthRequired";
 
 // 412
-// TODO
+export { PreconditionFailed } from "./PreconditionFailed";
 
 // 413
-// TODO
+export { RequestEntityTooLarge } from "./RequestEntityTooLarge";
 
 // 414
-// TODO
+export { RequestUriTooLong } from "./RequestUriTooLong";
 
 // 415
-// TODO
+export { UnsupportedMediaType } from "./UnsupportedMediaType";
 
 // 416
-// TODO
+export { RequestedRangeNotSatisfiable } from "./RequestedRangeNotSatisfiable";
 
 // 417
-// TODO
+export { ExpectationFailed } from "./ExpectationFailed";
 
 // 422s
 export { UnprocessableEntity } from "./UnprocessableEntity";
 export { ValidationError } from "./ValidationError";
 
 // 423
-// TODO
+export { Locked } from "./Locked";
 
 // 424
-// TODO
+export { FailedDependency } from "./FailedDependency";
 
 // 426
-// TODO
+export { UpgradeRequired } from "./UpgradeRequired";
 
 // 428
-// TODO
+export { PreconditionRequired } from "./PreconditionRequired";
 
 // 429
-// TODO
+export { TooManyRequests } from "./TooManyRequests";
 
 // 431
-// TODO
+export { RequestHeaderFieldsTooLarge } from "./RequestHeaderFieldsTooLarge";
 
 // 451
-// TODO
+export { UnavailableForLegalReasons } from "./UnavailableForLegalReasons";
