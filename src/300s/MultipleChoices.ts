@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class MultipleChoices extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 300,
-        message: "Multiple Choices",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[300].MultipleChoices;
 
     constructor({
         res,

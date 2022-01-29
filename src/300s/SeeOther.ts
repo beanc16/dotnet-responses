@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class SeeOther extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 303,
-        message: "See Other",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[300].SeeOther;
 
     constructor({
         res,

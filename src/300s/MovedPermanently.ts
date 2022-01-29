@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class MovedPermanently extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 301,
-        message: "Moved Permanently",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[300].MovedPermanently;
 
     constructor({
         res,

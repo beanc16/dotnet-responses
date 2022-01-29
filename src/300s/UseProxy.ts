@@ -1,16 +1,14 @@
-import { ResponseWithStatus, ResponseParamsWithNoStatus } from "../base";
+import {
+    ResponseWithStatus,
+    ResponseParamsWithNoStatus,
+    defaultParams,
+} from "../base";
 
 
 
 export class UseProxy extends ResponseWithStatus
 {
-    protected static override defaultParams = {
-        res: undefined,
-        statusCode: 305,
-        message: "Use Proxy",
-        data: null,
-        error: null,
-    };
+    protected static override defaultParams = defaultParams[300].UseProxy;
 
     constructor({
         res,
