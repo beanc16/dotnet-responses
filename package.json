@@ -6,6 +6,7 @@
     "name": "beanc16",
     "url": "https://github.com/beanc16"
   },
+  "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
