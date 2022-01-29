@@ -18,7 +18,7 @@
     "preversion": "npm run lint-src",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
-    "publish": "git checkout master && git push origin master && npm publish"
+    "publish": "git checkout master && git push origin master"
   },
   "keywords": [
     "dotnet",
