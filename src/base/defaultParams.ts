@@ -182,4 +182,56 @@ export const defaultParams = {
             error: null,
         },
     },
+
+    500: {
+        InternalServerError: {
+            res: undefined,
+            statusCode: 500,
+            message: "Internal Server Error",
+            data: null,
+            error: null,
+        },
+        NotImplemented: {
+            res: undefined,
+            statusCode: 501,
+            message: "Not Implemented",
+            data: null,
+            error: null,
+        },
+        BadGateway: {
+            res: undefined,
+            statusCode: 502,
+            message: "Bad Gateway",
+            data: null,
+            error: null,
+        },
+        ServiceUnavailable: {
+            res: undefined,
+            statusCode: 503,
+            message: "Service Unavailable",
+            data: null,
+            error: null,
+        },
+        GatewayTimeout: {
+            res: undefined,
+            statusCode: 504,
+            message: "Gateway Timeout",
+            data: null,
+            error: null,
+        },
+        NotExtended: {
+            res: undefined,
+            statusCode: 510,
+            message: "Not Extended",
+            data: null,
+            error: null,
+        },
+        NetworkAuthenticationRequired: {
+            res: undefined,
+            statusCode: 511,
+            message: "Network Authentication Required",
+            data: null,
+            error: null,
+        },
+    },
 };
