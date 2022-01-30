@@ -363,51 +363,51 @@ const { validateMyPayloadAsync } = require("./some-file-for-custom-validation");
 
 app.post("/validation-error", function(req, res)
 {
-  validateMyPayloadAsync(req.body)
-  .then((result) => {
-    /*
-    Call res.json and send the following object to the client:
-    {
-        "statusCode": 200,
-        "message": "Ok",
-        "data": {
-            // Info about result here
-        },
-        "error": {
-            // Info about your error here
+    validateMyPayloadAsync(req.body)
+    .then((result) => {
+        /*
+        Call res.json and send the following object to the client:
+        {
+            "statusCode": 200,
+            "message": "Ok",
+            "data": {
+                // Info about result here
+            },
+            "error": {
+                // Info about your error here
+            }
         }
-    }
-    */
-    Ok.json({
-        res,                                // Response object from express
-        statusCode: 200,                    // Number (optional)
-        message: "Ok",                      // String (optional)
-        data: result,                       // Object or Array (optional)
-        error: new Error("Ok Example"),     // Object (optional)
-    });
-  })
-  .catch((err) => {
-    /*
-    Call res.json and send the following object to the client:
-    {
-        "statusCode": 422,
-        "message": "Unprocessable Entity",
-        "data": {
-            "foo": "bar"
-        },
-        "error": {
-            // Info about your err here
+        */
+        Ok.json({
+            res,                            // Response object from express
+            statusCode: 200,                // Number (optional)
+            message: "Ok",                  // String (optional)
+            data: result,                   // Object or Array (optional)
+            error: new Error("Ok Example"), // Object (optional)
+        });
+    })
+    .catch((err) => {
+        /*
+        Call res.json and send the following object to the client:
+        {
+            "statusCode": 422,
+            "message": "Unprocessable Entity",
+            "data": {
+                "foo": "bar"
+            },
+            "error": {
+                // Info about your err here
+            }
         }
-    }
-    */
-    UnprocessableEntity.json({
-        res,                                // Response object from express
-        statusCode: 422,                    // Number (optional)
-        message: "Unprocessable Entity",    // String (optional)
-        data: { foo: "bar" },               // Object or Array (optional)
-        error: err,                         // Object (optional)
+        */
+        UnprocessableEntity.json({
+            res,                            // Response object from express
+            statusCode: 422,                // Number (optional)
+            message: "Unprocessable Entity",// String (optional)
+            data: { foo: "bar" },           // Object or Array (optional)
+            error: err,                     // Object (optional)
+        });
     });
-  });
 });
 
 app.listen(3000);
