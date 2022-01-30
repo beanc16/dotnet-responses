@@ -306,7 +306,7 @@ const { BadRequest } = require("dotnet-responses");
 
 app.get("/bad-request", function(req, res)
 {
-    // Call res.sendStatus to send response of "Ok" to client
+    // Call res.sendStatus to send response of "Bad Request" to client
     BadRequest.sendStatus({
         res,                                // Response object from express
         statusCode: 400,                    // Number (optional)
