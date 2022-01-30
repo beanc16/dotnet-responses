@@ -1,4 +1,8 @@
-import { Response, ResponseParamsWithStatus } from ".";
+import {
+    Response,
+    ResponseParamsWithStatus,
+    ExpressResponse,
+} from ".";
 import {
     ResDoesNotExistError,
     ResFunctionDoesNotExistError,
@@ -157,10 +161,12 @@ export class ResponseWithStatus extends Response
         return response.status();
     }
 
-    static sendStatus(params: ResponseParamsWithStatus)
+    static sendStatus(params: {
+        res?: ExpressResponse,      // For managing status codes via express responses
+        statusCode?: number,        // For status code
+    })
     {
         // Set values from subclass if they aren't given
-        params.message = params.message ?? this.defaultParams.message;
         params.statusCode = params.statusCode ?? this.defaultParams.statusCode;
 
         // Run the function
