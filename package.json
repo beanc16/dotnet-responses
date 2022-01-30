@@ -10,7 +10,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -d -r ./lib && tsc",
     "lint": "npx eslint . --ext .ts",
     "lint-src": "npx eslint ./src --ext .ts",
     "test": "jest --config jestconfig.json",
