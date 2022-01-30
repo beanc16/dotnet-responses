@@ -423,8 +423,8 @@ app.get("/bad-request", function (req, res) {
     /*
     Call res.jsonp and send the following object to the client:
     {
-        "statusCode": 200,
-        "message": "Ok",
+        "statusCode": 400,
+        "message": "Bad Request",
         "data": {
             "foo": "bar"
         },
@@ -435,8 +435,8 @@ app.get("/bad-request", function (req, res) {
     */
     BadRequest.jsonp({
         res,                                // Response object from express
-        statusCode: 200,                    // Number (optional)
-        message: "Ok",                      // String (optional)
+        statusCode: 400,                    // Number (optional)
+        message: "Bad Request",             // String (optional)
         data: { foo: "bar" },               // Object or Array (optional)
         error: new Error("Bad Request"),    // Object (optional)
     });
