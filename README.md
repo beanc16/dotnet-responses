@@ -120,7 +120,7 @@ new BadRequest({
 });
 ```
 
-### Basic Response
+### Base Response
 
 ```js
 const { Response } = require("dotnet-responses");
@@ -466,86 +466,86 @@ app.listen(3000);
 ## List of Classes
 
 ### Format of List
-- statusCode: ClassName
+- statusCode: `ClassName`
 
 ### 100s
-- 100: Continue
-- 101: SwitchingProtocols
-- 102: Processing
+- 100: `Continue`
+- 101: `SwitchingProtocols`
+- 102: `Processing`
 
 ### 200s
-- 200: Ok
-- 200: Success
-- 201: Created
-- 202: Accepted
-- 203: NonAuthoritativeInformation
-- 204: NoContent
-- 205: ResetContent
-- 206: PartialContent
-- 207: MultiStatus
-- 208: AlreadyReported
-- 226: IMUsed
+- 200: `Ok`
+- 200: `Success`
+- 201: `Created`
+- 202: `Accepted`
+- 203: `NonAuthoritativeInformation`
+- 204: `NoContent`
+- 205: `ResetContent`
+- 206: `PartialContent`
+- 207: `MultiStatus`
+- 208: `AlreadyReported`
+- 226: `IMUsed`
 
 ### 300s
-- 300: MultipleChoices
-- 301: MovedPermanently
-- 302: Found
-- 303: SeeOther
-- 304: NotModified
-- 305: UseProxy
-- 307: TemporaryRedirect
-- 308: PermanentRedirect
+- 300: `MultipleChoices`
+- 301: `MovedPermanently`
+- 302: `Found`
+- 303: `SeeOther`
+- 304: `NotModified`
+- 305: `UseProxy`
+- 307: `TemporaryRedirect`
+- 308: `PermanentRedirect`
 
 ### 400s
-- 400: BadRequest
-- 401: Unauthorized
-- 403: Forbidden
-- 404: InvalidUrl
-- 404: NotFound
-- 405: MethodNotAllowed
-- 406: NotAcceptable
-- 407: ProxyAuthenticationError
-- 408: RequestTimeout
-- 409: Conflict
-- 410: Gone
-- 411: LengthRequired
-- 412: PreconditionFailed
-- 413: RequestEntityTooLarge
-- 414: RequestUriTooLong
-- 415: UnsupportedMediaType
-- 416: RequestedRangeNotSatisfiable
-- 417: ExpectationFailed
-- 422: UnprocessableEntity
-- 422: ValidationError
-- 423: Locked
-- 424: FailedDependency
-- 426: UpgradeRequired
-- 428: PreconditionRequired
-- 429: TooManyRequests
-- 431: RequestHeaderFieldsTooLarge
-- 444: NoResponse
-- 449: RetryWith
-- 451: UnavailableForLegalReasons
-- 499: ClientClosedRequest
+- 400: `BadRequest`
+- 401: `Unauthorized`
+- 403: `Forbidden`
+- 404: `InvalidUrl`
+- 404: `NotFound`
+- 405: `MethodNotAllowed`
+- 406: `NotAcceptable`
+- 407: `ProxyAuthenticationError`
+- 408: `RequestTimeout`
+- 409: `Conflict`
+- 410: `Gone`
+- 411: `LengthRequired`
+- 412: `PreconditionFailed`
+- 413: `RequestEntityTooLarge`
+- 414: `RequestUriTooLong`
+- 415: `UnsupportedMediaType`
+- 416: `RequestedRangeNotSatisfiable`
+- 417: `ExpectationFailed`
+- 422: `UnprocessableEntity`
+- 422: `ValidationError`
+- 423: `Locked`
+- 424: `FailedDependency`
+- 426: `UpgradeRequired`
+- 428: `PreconditionRequired`
+- 429: `TooManyRequests`
+- 431: `RequestHeaderFieldsTooLarge`
+- 444: `NoResponse`
+- 449: `RetryWith`
+- 451: `UnavailableForLegalReasons`
+- 499: `ClientClosedRequest`
 
 ### 500s
-- 500: InternalServerError
-- 501: NotImplemented
-- 502: BadGateway
-- 503: ServiceUnavailable
-- 504: GatewayTimeout
-- 505: HttpVersionNotSupported
-- 506: VariantAlsoNegotiates
-- 507: InsufficientStorage
-- 508: LoopDetected
-- 509: BandwidthLimitExceeded
-- 510: NotExtended
-- 511: NetworkAuthenticationRequired
-- 598: NetworkReadTimeoutError
-- 599: NetworkConnectTimeoutError
+- 500: `InternalServerError`
+- 501: `NotImplemented`
+- 502: `BadGateway`
+- 503: `ServiceUnavailable`
+- 504: `GatewayTimeout`
+- 505: `HttpVersionNotSupported`
+- 506: `VariantAlsoNegotiates`
+- 507: `InsufficientStorage`
+- 508: `LoopDetected`
+- 509: `BandwidthLimitExceeded`
+- 510: `NotExtended`
+- 511: `NetworkAuthenticationRequired`
+- 598: `NetworkReadTimeoutError`
+- 599: `NetworkConnectTimeoutError`
 
 ### Base
-- Response
+- `Response`
 
 
 
