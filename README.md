@@ -157,7 +157,7 @@ const { Ok } = require("dotnet-responses");
 app.get("/ok", function(req, res)
 {
     // Call res.status to set statusCode to 200
-    // (This example function serves no purpose, as Ok has a status code of 200 by default)
+    // (This example serves no functional purpose, as Ok has a status code of 200 by default)
     const ok = new Ok({ res });
     ok.status(
         200     // Number
@@ -176,7 +176,7 @@ const { Ok } = require("dotnet-responses");
 
 app.get("/ok", function(req, res)
 {
-    // Call res.sendStatus to get response of "Ok"
+    // Call res.sendStatus to send response of "Ok" to client
     const ok = new Ok({ res });
     ok.sendStatus(
         200     // Number
@@ -287,6 +287,7 @@ const { BadRequest } = require("dotnet-responses");
 app.get("/bad-request", function(req, res)
 {
     // Call res.status to set statusCode to 400
+    // (This example serves no functional purpose, as BadRequest has a status code of 400 by default)
     BadRequest.status({
         res,                                // Response object from express
         statusCode: 400,                    // Number (optional)
@@ -305,7 +306,7 @@ const { BadRequest } = require("dotnet-responses");
 
 app.get("/bad-request", function(req, res)
 {
-    // Call res.sendStatus to get response of "Bad Request"
+    // Call res.sendStatus to send response of "Ok" to client
     BadRequest.sendStatus({
         res,                                // Response object from express
         statusCode: 400,                    // Number (optional)
