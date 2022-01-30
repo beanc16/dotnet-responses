@@ -132,7 +132,7 @@ new Response({
 });
 
 /*
-Response has no functions, it just stores the data passed into its constructor. 
+Response has no functions, it just stores the data passed into its constructor
 
 Response's default data:
 {
@@ -157,6 +157,7 @@ const { Ok } = require("dotnet-responses");
 app.get("/ok", function(req, res)
 {
     // Call res.status to set statusCode to 200
+    // (This example function serves no purpose, as Ok has a status code of 200 by default)
     const ok = new Ok({ res });
     ok.status(
         200     // Number
