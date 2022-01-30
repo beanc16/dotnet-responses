@@ -1,6 +1,6 @@
 # dotnet-responses
 
-A collection of response classes that mimic [ASP.NET responses](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-6.0#methods)
+A collection of response classes that mimic [ASP.NET responses](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-6.0#methods).
 
 <!-- Badges -->
   ![npm][npm-version]
@@ -43,7 +43,7 @@ app.get("/ok", function (req, res) {
 app.listen(3000);
 ```
 
-### Using Static Class
+### Using Static Classes
 ```js
 const express = require("express");
 const app = express();
@@ -82,6 +82,12 @@ app.get("/ok", function (req, res) {
     }
     */
     Responses.Ok.send({ res });
+    
+    /*
+    Can also do:
+    const ok = new Responses.Ok({ res });
+    ok.send();
+    */
 });
 
 app.listen(3000);
@@ -91,7 +97,7 @@ app.listen(3000);
 
 ## Constructors
 
-### Classes with a Status Code of 100-308
+### Classes With a Default Status Code of 100-308
 
 ```js
 const { Ok } = require("dotnet-responses");
@@ -102,7 +108,7 @@ new Ok({
 });
 ```
 
-### Classes with a Status Code of 400-599
+### Classes With a Default Status Code of 400-599
 
 ```js
 const { BadRequest } = require("dotnet-responses");
