@@ -190,9 +190,9 @@ app.listen(3000);
 ```js
 const express = require("express");
 const app = express();
-const { NotFound } = require("dotnet-responses");
+const { Ok } = require("dotnet-responses");
 
-app.get("/*", function(req, res)
+app.get("/ok", function(req, res)
 {
     /*
     Call res.send and send the following object to the client:
@@ -214,9 +214,9 @@ app.listen(3000);
 ```js
 const express = require("express");
 const app = express();
-const { NotFound } = require("dotnet-responses");
+const { Ok } = require("dotnet-responses");
 
-app.get("/*", function(req, res)
+app.get("/ok", function(req, res)
 {
     /*
     Call res.json and send the following object to the client:
@@ -238,9 +238,9 @@ app.listen(3000);
 ```js
 const express = require("express");
 const app = express();
-const { NotFound } = require("dotnet-responses");
+const { Ok } = require("dotnet-responses");
 
-app.get("/*", function(req, res)
+app.get("/ok", function(req, res)
 {
     /*
     Call res.jsonp and send the following object to the client:
@@ -262,9 +262,9 @@ app.listen(3000);
 ```js
 const express = require("express");
 const app = express();
-const { NotFound } = require("dotnet-responses");
+const { Ok } = require("dotnet-responses");
 
-app.get("/*", function(req, res)
+app.get("/ok", function(req, res)
 {
     // Call res.end
     const ok = new Ok({ res });
