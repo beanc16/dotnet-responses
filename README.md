@@ -463,9 +463,9 @@ app.listen(3000);
 
 
 
-## Response Classes
+## List of Classes
 
-### Format
+### Format of List
 - statusCode: ClassName
 
 ### 100s
