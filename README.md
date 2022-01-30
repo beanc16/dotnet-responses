@@ -18,39 +18,70 @@ $ npm install dotnet-responses
 
 
 
-## Usage
+## Basic Usage
 
-### Basic
+### Using Objects
 ```js
-const express = require('express');
+const express = require("express");
+const app = express();
+const { Ok } = require("dotnet-responses");
+
+app.get("/ok", function (req, res) {
+    /*
+    Call res.send and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": null,
+        "error": null
+    }
+    */
+    const ok = new Ok({ res });
+    ok.send();
+});
+
+app.listen(3000);
+```
+
+### Using Static Class
+```js
+const express = require("express");
+const app = express();
+const { Ok } = require("dotnet-responses");
+
+app.get("/ok", function (req, res) {
+    /*
+    Call res.send and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": null,
+        "error": null
+    }
+    */
+    Ok.send({ res });
+});
+
+app.listen(3000);
+```
+
+### Importing All Classes
+```js
+const express = require("express");
 const app = express();
 const Responses = require("dotnet-responses");
 
-app.get('/ok', function (req, res) {
-  /*
-  Call res.send and send the following object to the client:
-  {
-    "statusCode": 200,
-    "message": "Ok",
-    "data": null,
-    "error": null
-  }
-  */
-  const ok = new Responses.Ok({ res });
-  ok.send();
-});
-
-app.get('/ok-static', function (req, res) {
-  /*
-  Call res.send and send the following object to the client:
-  {
-    "statusCode": 200,
-    "message": "Ok",
-    "data": null,
-    "error": null
-  }
-  */
-  Responses.Ok.send({ res });
+app.get("/ok", function (req, res) {
+    /*
+    Call res.send and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": null,
+        "error": null
+    }
+    */
+    Responses.Ok.send({ res });
 });
 
 app.listen(3000);
@@ -58,7 +89,376 @@ app.listen(3000);
 
 
 
-## Response Types
+## Constructors
+
+### Classes with a Status Code of 100-308
+
+```js
+const { Ok } = require("dotnet-responses");
+new Ok({
+    res,        // Response object from express
+    message,    // String (optional)
+    data,       // Object or Array (optional)
+});
+```
+
+### Classes with a Status Code of 400-599
+
+```js
+const { BadRequest } = require("dotnet-responses");
+new BadRequest({
+    res,        // Response object from express
+    message,    // String (optional)
+    data,       // Object or Array (optional)
+    error,      // Object (optional)
+});
+```
+
+### Basic Response
+
+```js
+const { Response } = require("dotnet-responses");
+new Response({
+    statusCode, // Number (optional)
+    message,    // String (optional)
+    data,       // Object or Array (optional)
+    error,      // Object (optional)
+});
+
+/*
+Response has no functions, it just stores the data passed into its constructor. 
+
+Response's default data:
+{
+    "statusCode": 200,
+    "message": null,
+    "data": null,
+    "error": null
+}
+*/
+```
+
+
+
+## Object Functions
+
+### status
+```js
+const express = require("express");
+const app = express();
+const { Ok } = require("dotnet-responses");
+
+app.get("/ok", function(req, res)
+{
+    // Call res.status to set statusCode to 200
+    const ok = new Ok({ res });
+    ok.status(
+        200     // Number
+    );
+    ok.send();
+});
+
+app.listen(3000);
+```
+
+### sendStatus
+```js
+const express = require("express");
+const app = express();
+const { Ok } = require("dotnet-responses");
+
+app.get("/ok", function(req, res)
+{
+    // Call res.sendStatus to get response of "Ok"
+    const ok = new Ok({ res });
+    ok.sendStatus(
+        200     // Number
+    );
+});
+
+app.listen(3000);
+```
+
+### send
+```js
+const express = require("express");
+const app = express();
+const { NotFound } = require("dotnet-responses");
+
+app.get("/*", function(req, res)
+{
+    /*
+    Call res.send and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": null,
+        "error": null
+    }
+    */
+    const ok = new Ok({ res });
+    ok.send(/* No parameters */);
+});
+
+app.listen(3000);
+```
+
+### json
+```js
+const express = require("express");
+const app = express();
+const { NotFound } = require("dotnet-responses");
+
+app.get("/*", function(req, res)
+{
+    /*
+    Call res.json and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": null,
+        "error": null
+    }
+    */
+    const ok = new Ok({ res });
+    ok.json(/* No parameters */);
+});
+
+app.listen(3000);
+```
+
+### jsonp
+```js
+const express = require("express");
+const app = express();
+const { NotFound } = require("dotnet-responses");
+
+app.get("/*", function(req, res)
+{
+    /*
+    Call res.jsonp and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": null,
+        "error": null
+    }
+    */
+    const ok = new Ok({ res });
+    ok.jsonp(/* No parameters */);
+});
+
+app.listen(3000);
+```
+
+### end
+```js
+const express = require("express");
+const app = express();
+const { NotFound } = require("dotnet-responses");
+
+app.get("/*", function(req, res)
+{
+    // Call res.end
+    const ok = new Ok({ res });
+    ok.end(/* No parameters */);
+});
+
+app.listen(3000);
+```
+
+
+
+## Static Functions
+
+### status
+```js
+const express = require("express");
+const app = express();
+const { BadRequest } = require("dotnet-responses");
+
+app.get("/bad-request", function(req, res)
+{
+    // Call res.status to set statusCode to 400
+    BadRequest.status({
+        res,                                // Response object from express
+        statusCode: 400,                    // Number (optional)
+    });
+    BadRequest.send({ res });
+});
+
+app.listen(3000);
+```
+
+### sendStatus
+```js
+const express = require("express");
+const app = express();
+const { BadRequest } = require("dotnet-responses");
+
+app.get("/bad-request", function(req, res)
+{
+    // Call res.sendStatus to get response of "Bad Request"
+    BadRequest.sendStatus({
+        res,                                // Response object from express
+        statusCode: 400,                    // Number (optional)
+    });
+});
+
+app.listen(3000);
+```
+
+### send
+```js
+const express = require("express");
+const app = express();
+const { NotFound } = require("dotnet-responses");
+
+app.get("/*", function(req, res)
+{
+  /*
+  Call res.send and send the following object to the client:
+  {
+    "statusCode": 404,
+    "message": "Not Found",
+    "data": {
+        "foo": "bar"
+    },
+    "error": {
+        // Info about your error here
+    }
+  }
+  */
+    NotFound.send({
+        res,                                // Response object from express
+        statusCode: 404,                    // Number (optional)
+        message: "Not Found",               // String (optional)
+        data: { foo: "bar" },               // Object or Array (optional)
+        error: new Error("Page not found"), // Object (optional)
+    });
+});
+
+app.listen(3000);
+```
+
+### json
+```js
+const express = require("express");
+const app = express();
+const { Ok, UnprocessableEntity } = require("dotnet-responses");
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const { validateMyPayloadAsync } = require("./some-file-for-custom-validation");
+
+app.post("/validation-error", function(req, res)
+{
+  validateMyPayloadAsync(req.body)
+  .then((result) => {
+    /*
+    Call res.json and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": {
+            // Info about result here
+        },
+        "error": {
+            // Info about your error here
+        }
+    }
+    */
+    Ok.json({
+        res,                                // Response object from express
+        statusCode: 200,                    // Number (optional)
+        message: "Ok",                      // String (optional)
+        data: result,                       // Object or Array (optional)
+        error: new Error("Ok Example"),     // Object (optional)
+    });
+  })
+  .catch((err) => {
+    /*
+    Call res.json and send the following object to the client:
+    {
+        "statusCode": 422,
+        "message": "Unprocessable Entity",
+        "data": {
+            "foo": "bar"
+        },
+        "error": {
+            // Info about your err here
+        }
+    }
+    */
+    UnprocessableEntity.json({
+        res,                                // Response object from express
+        statusCode: 422,                    // Number (optional)
+        message: "Unprocessable Entity",    // String (optional)
+        data: { foo: "bar" },               // Object or Array (optional)
+        error: err,                         // Object (optional)
+    });
+  });
+});
+
+app.listen(3000);
+```
+
+### jsonp
+```js
+const express = require("express");
+const app = express();
+const { BadRequest } = require("dotnet-responses");
+
+app.get("/bad-request", function (req, res) {
+    /*
+    Call res.jsonp and send the following object to the client:
+    {
+        "statusCode": 200,
+        "message": "Ok",
+        "data": {
+            "foo": "bar"
+        },
+        "error": {
+            // Info about your err here
+        }
+    }
+    */
+    BadRequest.jsonp({
+        res,                                // Response object from express
+        statusCode: 200,                    // Number (optional)
+        message: "Ok",                      // String (optional)
+        data: { foo: "bar" },               // Object or Array (optional)
+        error: new Error("Bad Request"),    // Object (optional)
+    });
+});
+
+app.listen(3000);
+```
+
+### end
+```js
+const express = require("express");
+const app = express();
+const { Ok } = require("dotnet-responses");
+
+app.get("/ok", function (req, res) {
+    // Call res.end
+    Ok.end({
+        res,                                // Response object from express
+    });
+});
+
+app.listen(3000);
+```
+
+
+
+## Response Classes
+
+### Format
+- statusCode: ClassName
 
 ### 100s
 - 100: Continue
