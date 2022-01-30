@@ -150,10 +150,12 @@ export class ResponseWithStatus extends Response
 
 
     // Static versions of above functions
-    static status(params: ResponseParamsWithStatus)
+    static status(params: {
+        res?: ExpressResponse,      // For managing status codes via express responses
+        statusCode?: number,        // For status code
+    })
     {
         // Set values from subclass if they aren't given
-        params.message = params.message ?? this.defaultParams.message;
         params.statusCode = params.statusCode ?? this.defaultParams.statusCode;
 
         // Run the function
