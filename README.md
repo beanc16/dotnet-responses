@@ -3,9 +3,49 @@
 A collection of response classes that mimic [ASP.NET responses](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.controllerbase?view=aspnetcore-6.0#methods).
 
 <!-- Badges -->
-  ![npm][npm-version]
-  ![license][npm-license]
-  ![downloads][npm-downloads]
+![npm][npm-version]
+![license][npm-license]
+![downloads][npm-downloads]
+
+
+
+## Table of Contents
+
+- [dotnet-responses](#dotnet-responses)
+  - [Table of Contents](#table-of-contents)
+  - [Install](#install)
+  - [Basic Usage](#basic-usage)
+    - [Using Objects](#using-objects)
+    - [Using Static Classes](#using-static-classes)
+    - [Importing All Classes](#importing-all-classes)
+  - [Constructors](#constructors)
+    - [Classes With a Default Status Code of 100-308](#classes-with-a-default-status-code-of-100-308)
+    - [Classes With a Default Status Code of 400-599](#classes-with-a-default-status-code-of-400-599)
+    - [Base Response](#base-response)
+  - [Object Functions](#object-functions)
+    - [status](#status)
+    - [sendStatus](#sendstatus)
+    - [send](#send)
+    - [json](#json)
+    - [jsonp](#jsonp)
+    - [end](#end)
+  - [Static Functions](#static-functions)
+    - [status](#status-1)
+    - [sendStatus](#sendstatus-1)
+    - [send](#send-1)
+    - [json](#json-1)
+    - [jsonp](#jsonp-1)
+    - [end](#end-1)
+  - [List of Classes](#list-of-classes)
+    - [Format of List](#format-of-list)
+    - [100s](#100s)
+    - [200s](#200s)
+    - [300s](#300s)
+    - [400s](#400s)
+    - [500s](#500s)
+    - [Base](#base)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 
 
