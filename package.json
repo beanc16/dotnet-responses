@@ -1,6 +1,6 @@
 {
   "name": "dotnet-responses",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A collection of response classes that mimic ASP.NET responses",
   "author": {
     "name": "beanc16",
@@ -10,7 +10,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -d -r ./lib && tsc",
     "lint": "npx eslint . --ext .ts",
     "lint-src": "npx eslint ./src --ext .ts",
     "test": "jest --config jestconfig.json",
