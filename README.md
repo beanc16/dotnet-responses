@@ -324,19 +324,19 @@ const { NotFound } = require("dotnet-responses");
 
 app.get("/*", function(req, res)
 {
-  /*
-  Call res.send and send the following object to the client:
-  {
-    "statusCode": 404,
-    "message": "Not Found",
-    "data": {
+    /*
+    Call res.send and send the following object to the client:
+    {
+        "statusCode": 404,
+        "message": "Not Found",
+        "data": {
         "foo": "bar"
-    },
-    "error": {
-        // Info about your error here
+        },
+        "error": {
+            // Info about your error here
+        }
     }
-  }
-  */
+    */
     NotFound.send({
         res,                                // Response object from express
         statusCode: 404,                    // Number (optional)
