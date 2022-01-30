@@ -209,12 +209,10 @@ export class ResponseWithStatus extends Response
         return response.jsonp();
     }
 
-    static end(params: ResponseParamsWithStatus)
+    static end(params: {
+        res?: ExpressResponse,      // For managing status codes via express responses
+    })
     {
-        // Set values from subclass if they aren't given
-        params.message = params.message ?? this.defaultParams.message;
-        params.statusCode = params.statusCode ?? this.defaultParams.statusCode;
-
         // Run the function
         const response = new ResponseWithStatus(params);
         return response.end();
