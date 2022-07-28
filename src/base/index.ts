@@ -12,3 +12,6 @@ export { ResponseParamsWithNoStatus } from './ResponseParamsWithNoStatus';
 // Classes
 export { Response } from "./Response";
 export { ResponseWithStatus } from './ResponseWithStatus';
+
+// Functions
+export { getResponseByStatusCode } from "./getResponseByStatusCode";

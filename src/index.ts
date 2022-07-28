@@ -1,4 +1,4 @@
-export { Response } from "./base";
+export { Response, getResponseByStatusCode } from "./base";
 export * from "./100s";
 export * from "./200s";
 export * from "./300s";
