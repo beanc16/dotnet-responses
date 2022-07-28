@@ -44,6 +44,8 @@ A collection of response classes that mimic [ASP.NET responses](https://docs.mic
     - [400s](#400s)
     - [500s](#500s)
     - [Base](#base)
+  - [Helper Functions](#helper-functions)
+    - [getResponseByStatusCode](#getresponsebystatuscode)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -586,6 +588,19 @@ app.listen(3000);
 
 ### Base
 - `Response`
+
+
+
+## Helper Functions
+
+### getResponseByStatusCode
+```js
+const { getResponseByStatusCode } = require("dotnet-responses");
+
+const Ok = getResponseByStatusCode(200);
+const UnprocessableEntity = getResponseByStatusCode(422);
+const InternalServerError = getResponseByStatusCode(500);
+```
 
 
 
